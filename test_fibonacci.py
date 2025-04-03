@@ -1,4 +1,5 @@
 from fibonacci import fibonacci
+import pytest
 
 def test_fibonacci_of_1():
     assert fibonacci(1) == 0
@@ -14,3 +15,10 @@ def test_fibonacci_of_4():
     
 def test_fibonacci_of_5():  
     assert fibonacci(5) == 3
+    
+def test_fibonacci_large():
+    assert fibonacci(50) == 7778742049
+    
+def test_fibonacci_of_negative():
+    with pytest.raises(ValueError):
+        fibonacci(-1)
