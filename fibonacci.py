@@ -1,2 +1,6 @@
 def fibonacci(n):
-    return 0  # Hardcoded return value for now
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+
